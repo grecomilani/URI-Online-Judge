@@ -1,6 +1,8 @@
+package sequencial;
+
 import java.util.Scanner;
 
-public class P1007 {
+public class P1013 {
 
 	public static void main(String[] args) {
 		
@@ -9,11 +11,18 @@ public class P1007 {
 		int a = scn.nextInt();
 		int b = scn.nextInt();
 		int c = scn.nextInt();
-		int d = scn.nextInt();
 		
-		int diferenca = ((a * b) - (c * d));
+		int maior;
 		
-		System.out.println("DIFERENCA = " + diferenca);
+		if((a > b) && (a > c)) {
+			maior = a;
+		}else if((b > a) && (b > c)) {
+			maior = b;
+		}else {
+			maior = c;
+		}
+		
+		System.out.println(maior + " eh o maior");
 		
 		scn.close();
 
